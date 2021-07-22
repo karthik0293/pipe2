@@ -1,6 +1,7 @@
 pipeline {
 			agent none 
 			stages {
+				parallel {
 				stage('BUILD') {
 					agent { label 'ubuntu' }
 					steps {
@@ -32,6 +33,7 @@ pipeline {
 							echo This is the fist stage: DEPLOY
 						'''
 					}	
+				}
 				}
 			}
 		}
