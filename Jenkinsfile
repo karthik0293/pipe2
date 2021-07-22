@@ -1,7 +1,6 @@
 pipeline {
 			agent none 
 			stages {
-				parallel {
 				stage('BUILD') {
 					agent { label 'ubuntu' }
 					steps {
